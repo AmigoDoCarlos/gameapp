@@ -1,28 +1,28 @@
 div {
-    width: 100%;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    background: #E3E3E3;
-    padding: 0 14px;
-    min-height: 108px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: #e3e3e3;
+  padding: 0 14px;
+  min-height: 108px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
-    font-size: 18px;
-    font-weight: 600;
-    font-family: 'Inter';
-    margin: 5px 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Inter";
+  margin: 5px 0;
 }
 
 li {
-    font-size: 16px;
-    font-family: 'Inter';
-    color: black;   
-    text-align: right;
-    margin: 5px 0;
+  font-size: 16px;
+  font-family: "Inter";
+  color: black;
+  text-align: right;
+  margin: 5px 0;
 }

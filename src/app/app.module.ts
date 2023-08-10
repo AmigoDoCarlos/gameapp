@@ -20,13 +20,10 @@ import { TeamDetailsComponent } from './team-details/team-details.component';
     TeamSettingsComponent,
     TeamResultsComponent,
     NamesListComponent,
-    TeamDetailsComponent
+    TeamDetailsComponent,
   ],
-  imports: [
-    BrowserModule,
-    IconsModule,
-  ],
+  imports: [BrowserModule, IconsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

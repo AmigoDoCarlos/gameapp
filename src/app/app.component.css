@@ -1,12 +1,12 @@
 .app-background {
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    background-color: rgba(4,1,22, 0.95);
-    background-image: url(../assets/controllers.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgba(4, 1, 22, 0.95);
+  background-image: url(../assets/controllers.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }

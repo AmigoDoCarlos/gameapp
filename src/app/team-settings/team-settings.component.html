@@ -1,31 +1,27 @@
 <div class="settings-container">
-    <div class="input-div top-input">
-        <input
-            #numberInput
-            type="number"
-            class="number-input"
-            placeholder="n° de times"
-            [value]="number"
-            (input)="setNumber(numberInput.value)"
-        />
-        <p (click)="toggleTypeOfNumber()">
-            {{isNumberOfTeams? 'times' : 'jogadores / time'}}
-        </p>
-    </div>
-    <div class="input-div">
-        <input
-            #nameInput
-            type="text"
-            placeholder="nome do jogador"
-            [value]="name"
-            (input)="setName(nameInput.value)"
-            (keyup.enter)="addName()"
-        />
-        <button
-            (click)="addName()"
-        >
-            Adicionar
-        </button>
-    </div>
-    <app-names-list [people]="people" [removePerson]="removePerson"/>
+  <div class="input-div top-input">
+    <input
+      #numberInput
+      type="number"
+      class="number-input"
+      placeholder="n° de times"
+      [value]="number"
+      (input)="setNumber(numberInput.value)"
+    />
+    <p (click)="toggleTypeOfNumber()">
+      {{ isNumberOfTeams ? "times" : "jogadores / time" }}
+    </p>
+  </div>
+  <div class="input-div">
+    <input
+      #nameInput
+      type="text"
+      placeholder="nome do jogador"
+      [value]="name"
+      (input)="setName(nameInput.value)"
+      (keyup.enter)="addName()"
+    />
+    <button (click)="addName()">Adicionar</button>
+  </div>
+  <app-names-list [people]="people" [removePerson]="removePerson" />
 </div>

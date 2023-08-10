@@ -3,4 +3,4 @@ export type state = {
   isNumberOfTeams: boolean;
   people: string[];
   teams: string[][];
-}
+};

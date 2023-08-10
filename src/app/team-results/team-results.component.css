@@ -1,24 +1,24 @@
 button {
-    width: 330px;
-    height: 38px;
-    border-radius: 10px;
-    background: #0b0338;
-    border: none;
-    color: #DADADA;
-    font-size: 16px;
-    font-family: 'Inter';
-    cursor: pointer;
+  width: 330px;
+  height: 38px;
+  border-radius: 10px;
+  background: #0b0338;
+  border: none;
+  color: #dadada;
+  font-size: 16px;
+  font-family: "Inter";
+  cursor: pointer;
 }
 
 div {
-    width: 330px;
-    height: auto;
-    margin-top: 15px;
-    max-height: 720px;
-    overflow-x: hidden;
-    overflow-y: scroll;
+  width: 330px;
+  height: auto;
+  margin-top: 15px;
+  max-height: 720px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 div::-webkit-scrollbar {
-    display: none;
+  display: none;
 }

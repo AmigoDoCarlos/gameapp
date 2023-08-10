@@ -1,61 +1,61 @@
 .settings-container {
-    width: 330px;
-    max-height: 600px;
+  width: 330px;
+  max-height: 600px;
 }
 
 .input-div {
-    width: 100%;
-    height: 38px;
-    background: #E3E3E3;
-    border: 1px solid black;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5px 0 10px;
+  width: 100%;
+  height: 38px;
+  background: #e3e3e3;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px 0 10px;
 }
 
 input {
-    background-color: #E3E3E3;
-    border: none;
-    font-size: 16px;
+  background-color: #e3e3e3;
+  border: none;
+  font-size: 16px;
 }
 
 input:focus {
-    outline: none;   
+  outline: none;
 }
 
 .number-input {
-    width: 80%;
+  width: 80%;
 }
 
 .top-input {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 button {
-    height: 80%;
-    border: none;
-    background: royalblue;
-    color: white;
-    font-family: 'Inter';
-    font-size: 16px;
-    padding: 0 10px;
-    border-radius: 10px;
-    cursor: pointer;
+  height: 80%;
+  border: none;
+  background: royalblue;
+  color: white;
+  font-family: "Inter";
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 p {
-    white-space: nowrap;
-    color: royalblue;
-    font-size: 16px;
-    font-family: 'Inter';
-    font-weight: 600;
-    padding: 0 10px;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    border: 1px solid royalblue;
-    border-radius: 10px;
-    cursor: pointer;
+  white-space: nowrap;
+  color: royalblue;
+  font-size: 16px;
+  font-family: "Inter";
+  font-weight: 600;
+  padding: 0 10px;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  border: 1px solid royalblue;
+  border-radius: 10px;
+  cursor: pointer;
 }

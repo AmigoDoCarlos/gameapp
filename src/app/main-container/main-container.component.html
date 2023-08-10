@@ -1,23 +1,19 @@
-
 <div class="main-container">
-    <app-team-header />
-    <div class="content">
-        <app-team-settings
-            [people]="people"
-            [number]="inputNumber"
-            [setNumber]="setNumber"
-            [isNumberOfTeams]="isNumberOfTeams"
-            [addPerson]="addPerson"
-            [removePerson]="removePerson"
-            [clearMsg]="clearMsg"
-            [toggleTypeOfNumber]="toggleTypeOfNumber"
-        />
-        <app-team-results
-            [teams]="teams"
-            [sortTeams]="sortTeams"
-        />
-    </div>
-    <div class="error-msg-div">
-        <p *ngIf="msg.length" [class]="msgBackground">{{msg}}</p>
-    </div>
+  <app-team-header />
+  <div class="content">
+    <app-team-settings
+      [people]="people"
+      [number]="inputNumber"
+      [setNumber]="setNumber"
+      [isNumberOfTeams]="isNumberOfTeams"
+      [addPerson]="addPerson"
+      [removePerson]="removePerson"
+      [clearMsg]="clearMsg"
+      [toggleTypeOfNumber]="toggleTypeOfNumber"
+    />
+    <app-team-results [teams]="teams" [sortTeams]="sortTeams" />
+  </div>
+  <div class="error-msg-div">
+    <p *ngIf="msg.length" [class]="msgBackground">{{ msg }}</p>
+  </div>
 </div>

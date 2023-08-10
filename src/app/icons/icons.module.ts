@@ -6,17 +6,11 @@ import { Menu, X } from 'angular-feather/icons';
 const icons = {
   Menu,
   X,
-}
+};
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    FeatherModule.pick(icons),
-  ],
-  exports: [
-    FeatherModule,
-  ]
+  imports: [CommonModule, FeatherModule.pick(icons)],
+  exports: [FeatherModule],
 })
-
-export class IconsModule { }
+export class IconsModule {}
