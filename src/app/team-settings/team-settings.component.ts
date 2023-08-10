@@ -9,10 +9,12 @@ import { Component, Input } from '@angular/core';
 export class TeamSettingsComponent {
   @Input() number: number = 0;
   @Input() people: string[] = [];  
+  @Input() isNumberOfTeams: boolean = false;
   @Input() setNumber = (newNumber: string) => {};
   @Input() addPerson = (newPerson: string) => {};
   @Input() removePerson = (person: string) => {};
   @Input() clearMsg = () => {};
+  @Input() toggleTypeOfNumber = () => {};
 
   name: string = '';
 
@@ -25,7 +27,7 @@ export class TeamSettingsComponent {
     this.name = '';
   }
 
-  addNameToList = () => {
+  addName = () => {
     this.addPerson(this.name);
     this.clearName();
   }

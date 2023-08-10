@@ -46,6 +46,10 @@ export class MainContainerComponent {
     this.people.splice(index, 1);
   }
 
+  toggleTypeOfNumber = () => {
+    this.isNumberOfTeams = !this.isNumberOfTeams;
+  }
+
   setNumber = (newNumber: string) => {
     this.isShowingMsg() && this.clearMsg();
     if(newNumber.length === 0) return;
@@ -55,9 +59,18 @@ export class MainContainerComponent {
   }
 
   private okToSort = () => {
-    if(this.inputNumber < 0) return this.showError('Número de times não pode ser negativo.');
-    if(!this.inputNumber) return this.showError('Número de times não pode ser zero.');
-    if((this.people.length) < this.inputNumber) return this.showError('Há menos jogadores do que times.');
+    if(this.inputNumber < 0) return this.showError(
+      'Número de times não pode ser negativo.'
+    );
+    if(!this.inputNumber) return this.showError(
+      'Número de times não pode ser zero.'
+    );
+    if(this.isNumberOfTeams && (this.people.length < this.inputNumber)) return this.showError(
+      'Há menos jogadores do que times.'
+    );
+    if(!this.isNumberOfTeams && (this.people.length % this.inputNumber !== 0)) return this.showError(
+      `Não há jogadores suficientes para formar times com ${this.inputNumber} pessoas em cada.`
+    );
     return true;
   }
 
@@ -68,18 +81,25 @@ export class MainContainerComponent {
     } return teamsSoFar[teamNumber].push(spliced[0]);
   }
 
+  private getNumberOfTeams(){
+    return this.isNumberOfTeams
+    ? this.inputNumber
+    : (this.people.length / this.inputNumber);
+  }
+
   sortTeams = () => {
     if(!this.okToSort()) return;    
-    this.showSuccess(this.isShowingMsg()
+    this.showSuccess(this.msgBackground === 'green'
       ? 'Times re-sorteados!'
       : 'Times sorteados!'
     );
-    const peopleBeforeSorting = [...this.people];
-    this.people.sort(() => Math.random() - 0.5);
-    const teams: string[][] = [];
     let i = 0;
+    const peopleBeforeSorting = [...this.people];
+    const teams: string[][] = [];
+    const numberOfTeams = this.getNumberOfTeams();
+    this.people.sort(() => Math.random() - 0.5); 
     while(this.people.length > 0){
-      if(i < this.inputNumber) {
+      if(i < numberOfTeams) {
         this.pushNameToTeam(i, teams);
         i++;
         continue;

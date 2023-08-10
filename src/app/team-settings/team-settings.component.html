@@ -3,27 +3,26 @@
         <input
             #numberInput
             type="number"
+            class="number-input"
             placeholder="n° de times"
-            class="input"
             [value]="number"
             (input)="setNumber(numberInput.value)"
         />
-        <div class="slider left">
-            <div class="slider-ball"></div>
-        </div>
+        <p (click)="toggleTypeOfNumber()">
+            {{isNumberOfTeams? 'times' : 'jogadores / time'}}
+        </p>
     </div>
     <div class="input-div">
         <input
             #nameInput
             type="text"
             placeholder="nome do jogador"
-            class="input"
             [value]="name"
             (input)="setName(nameInput.value)"
+            (keyup.enter)="addName()"
         />
         <button
-            class="name-button"
-            (click)="addNameToList()"
+            (click)="addName()"
         >
             Adicionar
         </button>

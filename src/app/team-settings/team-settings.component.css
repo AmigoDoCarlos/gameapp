@@ -12,50 +12,50 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 10px;
+    padding: 0 5px 0 10px;
 }
 
-.input {
+input {
     background-color: #E3E3E3;
-    width: 280px;
     border: none;
     font-size: 16px;
 }
 
-.input:focus {
+input:focus {
     outline: none;   
+}
+
+.number-input {
+    width: 80%;
 }
 
 .top-input {
     margin-bottom: 15px;
 }
 
-.slider {
-    width: 49px;
-    height: 25px;
-    border-radius: 13px;
-    padding: 0 4px;
-    background-color: royalblue;
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-}
-
-.slider-ball {
-    width: 19px;
-    height: 19px;
-    border-radius: 50%;
-    background: #E3E3E3;
-}
-
-.name-button {
-    height: 100%;
-    width: 92px;
+button {
+    height: 80%;
     border: none;
     background: royalblue;
     color: white;
     font-family: 'Inter';
     font-size: 16px;
     padding: 0 10px;
-    border-radius: 0 9px 9px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+p {
+    white-space: nowrap;
+    color: royalblue;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-weight: 600;
+    padding: 0 10px;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    border: 1px solid royalblue;
+    border-radius: 10px;
+    cursor: pointer;
 }

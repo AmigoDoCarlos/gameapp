@@ -35,6 +35,7 @@ li {
     margin: 0;
     margin-right: 10px;
     border: none;
+    cursor: pointer;
 }
 
 .x-icon {
