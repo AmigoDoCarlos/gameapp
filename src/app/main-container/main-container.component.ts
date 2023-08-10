@@ -22,7 +22,6 @@ export class MainContainerComponent {
   showError = (msg: string) => {
     this.msg = msg;
     this.msgBackground = 'red';
-    console.log(this.msg);
   }
 
   isShowingMsg = () => {
@@ -106,7 +105,6 @@ export class MainContainerComponent {
       }
       i = 0;
     }
-    console.log(teams);
     this.teams = teams;
     this.people = peopleBeforeSorting;
   }
