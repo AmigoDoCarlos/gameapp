@@ -1,0 +1,10 @@
+<div>
+    <ul>
+        <li *ngFor="let person of people">
+            <button class="x-button" (click)="removePerson(person)">
+                <i-feather name="x" class="x-icon"/>
+            </button>
+            {{person}}
+        </li>
+    </ul>
+</div>

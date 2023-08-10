@@ -1,0 +1,6 @@
+<button (click)="sortTeams()">
+    Gerar times!
+</button>
+<div>
+    <app-team-details *ngFor="let team of teams; let i = index" [team]="team" [teamNumber]="i"/>
+</div>
