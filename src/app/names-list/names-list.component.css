@@ -44,12 +44,12 @@ li {
   color: red;
 }
 
-@media(max-width: 500px){
+@media (max-width: 500px) {
   div {
     width: 100%;
     min-width: 300px;
   }
 }
 
-@media(max-width: 380px){
+@media (max-width: 380px) {
 }

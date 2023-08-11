@@ -27,7 +27,7 @@ div::-webkit-scrollbar {
   display: none;
 }
 
-@media(max-width: 500px){
+@media (max-width: 500px) {
   div {
     min-width: 330px;
     width: 100%;
@@ -40,7 +40,7 @@ div::-webkit-scrollbar {
   }
 }
 
-@media(max-width: 380px){
+@media (max-width: 380px) {
   div {
     min-width: 300px;
   }

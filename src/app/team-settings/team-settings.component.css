@@ -60,13 +60,15 @@ p {
   cursor: pointer;
 }
 
-@media(max-width: 500px){
+@media (max-width: 500px) {
   .settings-container {
     width: 100%;
     min-width: 330px;
   }
 
-  input, p, button {
+  input,
+  p,
+  button {
     font-size: 15px;
   }
 
@@ -75,7 +77,7 @@ p {
   }
 }
 
-@media(max-width: 380px){
+@media (max-width: 380px) {
   .settings-container {
     min-width: 300px;
   }

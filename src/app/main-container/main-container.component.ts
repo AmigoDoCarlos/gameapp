@@ -14,13 +14,15 @@ export class MainContainerComponent {
   msgBackground: string = '';
 
   private okToSort = () => {
-    const typeOfNumber = this.isNumberOfTeams
-    ? 'times'
-    : 'jogadores / time';
+    const typeOfNumber = this.isNumberOfTeams ? 'times' : 'jogadores / time';
     if (this.inputNumber < 0)
-      return this.showError('Número de ' +  typeOfNumber + ' não pode ser negativo.');
+      return this.showError(
+        'Número de ' + typeOfNumber + ' não pode ser negativo.',
+      );
     if (!this.inputNumber)
-      return this.showError('Número de ' + typeOfNumber + ' não pode ser zero.');
+      return this.showError(
+        'Número de ' + typeOfNumber + ' não pode ser zero.',
+      );
     if (this.isNumberOfTeams && this.people.length < this.inputNumber)
       return this.showError('Há menos jogadores do que times.');
     if (!this.isNumberOfTeams && this.people.length % this.inputNumber !== 0)
@@ -42,7 +44,7 @@ export class MainContainerComponent {
     return this.isNumberOfTeams
       ? this.inputNumber
       : this.people.length / this.inputNumber;
-  }
+  };
 
   showSuccess = (msg: string) => {
     this.msg = msg;

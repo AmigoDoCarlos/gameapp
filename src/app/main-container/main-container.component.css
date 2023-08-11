@@ -55,8 +55,7 @@ p {
   justify-content: space-between;
 }
 
-
-@media(max-width: 500px){
+@media (max-width: 500px) {
   .main-container {
     width: 356px;
     padding: 14px;
@@ -71,7 +70,7 @@ p {
   }
 }
 
-@media(max-width: 380px){
+@media (max-width: 380px) {
   .main-container {
     width: 330px;
   }
