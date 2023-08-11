@@ -1,8 +1,8 @@
 {
-  "name": "gameapp",
-  "short_name": "gameapp",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Assistente de jogos",
+  "short_name": "Assistente",
+  "theme_color": "#100d21",
+  "background_color": "#000000",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
