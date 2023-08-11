@@ -1,4 +1,9 @@
-<button (click)="sortTeams()">Gerar times!</button>
+<button 
+  [disabled]="numberOfPlayers === 0"
+  (click)="sortTeams()"
+>
+  Gerar times!
+</button>
 <div>
   <app-team-details
     *ngFor="let team of teams; let i = index"

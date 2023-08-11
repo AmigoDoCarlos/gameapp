@@ -11,9 +11,13 @@
       [clearMsg]="clearMsg"
       [toggleTypeOfNumber]="toggleTypeOfNumber"
     />
-    <app-team-results [teams]="teams" [sortTeams]="sortTeams" />
+    <app-team-results
+      [numberOfPlayers]="people.length"
+      [teams]="teams"
+      [sortTeams]="sortTeams"
+    />
   </div>
-  <div class="error-msg-div">
+  <div class="msg-div">
     <p *ngIf="msg.length" [class]="msgBackground">{{ msg }}</p>
   </div>
 </div>

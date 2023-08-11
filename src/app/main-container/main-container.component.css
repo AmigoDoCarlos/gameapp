@@ -9,7 +9,7 @@
   padding: 14px 20px;
 }
 
-.error-msg-div {
+.msg-div {
   width: 100%;
   height: 27px;
   display: flex;
@@ -21,12 +21,22 @@ p {
   width: 100%;
   font-family: "Inter";
   font-size: 14px;
+  font-weight: 500;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 25px;
   border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  animation: none;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  width: 100%;
+  border-radius: 0;
 }
 
 .red {
@@ -34,7 +44,7 @@ p {
 }
 
 .green {
-  background-color: #00b050;
+  background-color: forestgreen;
 }
 
 .content {
@@ -43,4 +53,26 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+
+@media(max-width: 500px){
+  .main-container {
+    width: 356px;
+    padding: 14px;
+  }
+
+  .msg-div {
+    height: 100%;
+  }
+
+  .content {
+    justify-content: center;
+  }
+}
+
+@media(max-width: 380px){
+  .main-container {
+    width: 330px;
+  }
 }

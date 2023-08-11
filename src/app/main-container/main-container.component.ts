@@ -13,6 +13,37 @@ export class MainContainerComponent {
   msg: string = '';
   msgBackground: string = '';
 
+  private okToSort = () => {
+    const typeOfNumber = this.isNumberOfTeams
+    ? 'times'
+    : 'jogadores / time';
+    if (this.inputNumber < 0)
+      return this.showError('Número de ' +  typeOfNumber + ' não pode ser negativo.');
+    if (!this.inputNumber)
+      return this.showError('Número de ' + typeOfNumber + ' não pode ser zero.');
+    if (this.isNumberOfTeams && this.people.length < this.inputNumber)
+      return this.showError('Há menos jogadores do que times.');
+    if (!this.isNumberOfTeams && this.people.length % this.inputNumber !== 0)
+      return this.showError(
+        `Não há jogadores suficientes para formar times com ${this.inputNumber} pessoas em cada.`,
+      );
+    return true;
+  };
+
+  private pushNameToTeam = (teamNumber: number, teamsSoFar: string[][]) => {
+    const spliced = this.people.splice(0, 1);
+    if (teamNumber === teamsSoFar.length) {
+      return teamsSoFar.push(spliced);
+    }
+    return teamsSoFar[teamNumber].push(spliced[0]);
+  };
+
+  private getNumberOfTeams = () => {
+    return this.isNumberOfTeams
+      ? this.inputNumber
+      : this.people.length / this.inputNumber;
+  }
+
   showSuccess = (msg: string) => {
     this.msg = msg;
     this.msgBackground = 'green';
@@ -33,6 +64,7 @@ export class MainContainerComponent {
   };
 
   addPerson = (newName: string) => {
+    this.isShowingMsg() && this.clearMsg();
     if (!newName.length)
       return this.showError('nome do jogador não pode ser vazio');
     this.people.push(newName);
@@ -46,6 +78,7 @@ export class MainContainerComponent {
   };
 
   toggleTypeOfNumber = () => {
+    this.isShowingMsg() && this.clearMsg();
     this.isNumberOfTeams = !this.isNumberOfTeams;
   };
 
@@ -57,41 +90,8 @@ export class MainContainerComponent {
     this.inputNumber = n;
   };
 
-  private okToSort = () => {
-    if (this.inputNumber < 0)
-      return this.showError('Número de times não pode ser negativo.');
-    if (!this.inputNumber)
-      return this.showError('Número de times não pode ser zero.');
-    if (this.isNumberOfTeams && this.people.length < this.inputNumber)
-      return this.showError('Há menos jogadores do que times.');
-    if (!this.isNumberOfTeams && this.people.length % this.inputNumber !== 0)
-      return this.showError(
-        `Não há jogadores suficientes para formar times com ${this.inputNumber} pessoas em cada.`,
-      );
-    return true;
-  };
-
-  private pushNameToTeam = (teamNumber: number, teamsSoFar: string[][]) => {
-    const spliced = this.people.splice(0, 1);
-    if (teamNumber === teamsSoFar.length) {
-      return teamsSoFar.push(spliced);
-    }
-    return teamsSoFar[teamNumber].push(spliced[0]);
-  };
-
-  private getNumberOfTeams() {
-    return this.isNumberOfTeams
-      ? this.inputNumber
-      : this.people.length / this.inputNumber;
-  }
-
   sortTeams = () => {
     if (!this.okToSort()) return;
-    this.showSuccess(
-      this.msgBackground === 'green'
-        ? 'Times re-sorteados!'
-        : 'Times sorteados!',
-    );
     let i = 0;
     const peopleBeforeSorting = [...this.people];
     const teams: string[][] = [];
@@ -107,5 +107,10 @@ export class MainContainerComponent {
     }
     this.teams = teams;
     this.people = peopleBeforeSorting;
+    this.showSuccess(
+      this.msgBackground === 'green'
+        ? 'Times re-sorteados!'
+        : 'Times sorteados!',
+    );
   };
 }

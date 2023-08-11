@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./team-results.component.css'],
 })
 export class TeamResultsComponent {
-  @Input() sortTeams = () => {};
+  @Input() numberOfPlayers: number = 0;
   @Input() teams: string[][] = [];
+  @Input() sortTeams = () => {};
 }

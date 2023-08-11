@@ -10,6 +10,10 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  opacity: 0.4;
+}
+
 div {
   width: 330px;
   height: auto;
@@ -21,4 +25,23 @@ div {
 
 div::-webkit-scrollbar {
   display: none;
+}
+
+@media(max-width: 500px){
+  div {
+    min-width: 330px;
+    width: 100%;
+  }
+
+  button {
+    margin-top: 10px;
+    width: 100%;
+    height: 42px;
+  }
+}
+
+@media(max-width: 380px){
+  div {
+    min-width: 300px;
+  }
 }

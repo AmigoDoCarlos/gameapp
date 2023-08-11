@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IconsModule } from './icons/icons.module';
 
@@ -10,6 +10,7 @@ import { TeamSettingsComponent } from './team-settings/team-settings.component';
 import { TeamResultsComponent } from './team-results/team-results.component';
 import { NamesListComponent } from './names-list/names-list.component';
 import { TeamDetailsComponent } from './team-details/team-details.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,12 @@ import { TeamDetailsComponent } from './team-details/team-details.component';
     NamesListComponent,
     TeamDetailsComponent,
   ],
-  imports: [BrowserModule, IconsModule],
+  imports: [BrowserModule, IconsModule, ServiceWorkerModule.register('ngsw-worker.js', {
+  enabled: !isDevMode(),
+  // Register the ServiceWorker as soon as the application is stable
+  // or after 30 seconds (whichever comes first).
+  registrationStrategy: 'registerWhenStable:30000'
+})],
   providers: [],
   bootstrap: [AppComponent],
 })

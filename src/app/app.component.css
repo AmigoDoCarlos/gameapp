@@ -10,3 +10,10 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@media(max-width: 500px){
+  .app-background {
+    background: linear-gradient(135deg, rgba(8,25,56,1) 0%, rgba(101,16,101,1) 53%, rgba(67,11,119,1) 100%);
+  }
+}
+

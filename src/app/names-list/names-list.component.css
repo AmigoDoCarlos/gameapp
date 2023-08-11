@@ -43,3 +43,13 @@ li {
   height: 100%;
   color: red;
 }
+
+@media(max-width: 500px){
+  div {
+    width: 100%;
+    min-width: 300px;
+  }
+}
+
+@media(max-width: 380px){
+}

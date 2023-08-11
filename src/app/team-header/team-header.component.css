@@ -17,3 +17,15 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+
+@media(max-width: 500px){
+  h1 {
+    font-size: 25px;
+  }
+}
+
+@media(max-width: 380px){
+  h1 {
+    font-size: 23px;
+  }
+}
